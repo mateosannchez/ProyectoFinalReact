@@ -1,29 +1,26 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Navbar from "./componentes/nav/navbar"
-import Inicio from "./componentes/nav/paginas/inicio"
-import Comprar from "./componentes/nav/paginas/ccomprar"
-import Contacto from "./componentes/nav/paginas/contac"
-import Mayorista from "./componentes/nav/paginas/mayor"
-import Preguntas from "./componentes/nav/paginas/pregfrec"
-import Talles from "./componentes/nav/paginas/talles"
-
+import Header from "./componentes/Header/header";
+import Section from "./componentes/Section/Section"
 
 
 function App() {
   return (
     <div className="App">
 
-      <Navbar/>
-      {/* <Switch>
-      <Route path='./componentes/nav/paginas/inicio.js' exact component={Inicio}/>
-      <Route path='./componentes/nav/paginas/ccomprar.js' exact component={Comprar}/>
-      <Route path='./componentes/nav/paginas/contac.js' exact component={Contacto}/>
-      <Route path='./componentes/nav/paginas/mayor.js' exact component={Mayorista}/>
-      <Route path='./componentes/nav/paginas/pregfrec.js' exact component={Preguntas}/>
-      <Route path='./componentes/nav/paginas/talles.js' exact component={Talles}/>
-      </Switch> */}
-      
+      <Header />
+
+      <div className="App">
+
+                
+
+                <Section
+                    marca="Nike"
+                    modelo="Air Max"
+                    precio="7000"
+                />
+
+
+      </div> 
+
 
     </div>
   )
@@ -31,14 +28,53 @@ function App() {
 
 
 
-// const App = () => {
+
+
+
+// function Person(props) {
+//   
+
 //   return (
-//     <>
-//       <p>Hola app.js</p>
-//     </>
+
+{/* <div className="person">
+
+  <h2>Marca: {props.marca}</h2>
+  <h3>Modelo: {props.modelo}</h3>
+  <h3>Precio: {props.precio}</h3>
+</div> */}
+//   );
+// }
+
+
+// function App() {
+
+//   return (
+
+//     <div className="App">
+
+//       <h1>Productos</h1>
+
+//       <Person
+//         marca="Nike"
+//         modelo="Air Max"
+//         precio="7000" 
+//       />
+
+
+//     </div>
+
 //   )
+
 // };
-//export const App =  () => "Hola"
+
+
+
 
 export default App;
+
+
+
+
+
+
 

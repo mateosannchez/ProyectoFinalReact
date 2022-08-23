@@ -37,10 +37,68 @@
   }
 }
 
+.container {
+  border: 10px chocolate solid;
+  width: 10000px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .nav {
   
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  border: 10px blue solid;
+  background-color: black;
+  width: 100%;
+}
+
+.header__nav {
+  border: 10px solid green;
+  width: 100%;
+}
+
+.header__izq {
+  border: 10px solid palegreen;
+  
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.header__cen {
+  border: 10px solid lawngreen;
+  width: 500px;
+  transform: translateX(170px);
+}
+
+.header__der {
+  border: 10px solid wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  transform: translateX(420px);
+}
+
+.header__der--car {
+  border: 10px solid wheat;
+  color: white;
+  
+}
+
+.section {
+
+  border: 10px solid peru;
 }
