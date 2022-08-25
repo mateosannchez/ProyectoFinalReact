@@ -67,7 +67,7 @@
 .header__izq {
   border: 10px solid palegreen;
   
-  width: 100px;
+  /* width: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +79,12 @@
 .header__cen {
   border: 10px solid lawngreen;
   width: 500px;
-  transform: translateX(170px);
+  transform: translateX(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .header__der {
@@ -89,16 +94,82 @@
   justify-content: center;
   align-items: center;
   width: 100px;
-  transform: translateX(420px);
+  transform: translateX(240px);
 }
 
 .header__der--car {
   border: 10px solid wheat;
   color: white;
+  width: 50px;
   
 }
+
 
 .section {
 
   border: 10px solid peru;
+}
+
+
+
+.contador {
+  border: 10px solid royalblue;
+  width: 100%;
+}
+
+/* .contador__1 {
+  border: 10px solid red;
+  display: inline;
+
+} */
+
+.contador__suma {
+  border: 10px solid blue;
+  width: 60px;
+  background-color: white;
+  color: black;
+  font-size: 23px;
+  border-color: white;
+  /* border: none; */
+
+}
+
+.contador__resta {
+  border: 10px solid blueviolet;
+  width: 60px;
+  transform: translateY(5px);
+  background-color: white;
+  color: black;
+  font-size: 43px;
+  border-color: white;
+  /* border: none; */
+  
+}
+
+.contador__carrito {
+  /* border: 10px solid gray; */
+  background-color: black;
+  color: white;
+  border-bottom: 10px;
+  font-size: 25px;
+  border-radius: 30px;
+  border: none;
+}
+
+.contador__stock {
+  /* border: 10px solid indigo; */
+  color: #212529; 
+  background-color: transparent;
+  opacity: .65;
+}
+
+.contador__count {
+  border: 10px solid yellow;
+  width: 45px;
+  transform: translateY(2px);
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  border-color: white;
+  /* border: none; */
 }

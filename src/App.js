@@ -1,6 +1,6 @@
 import Header from "./componentes/Header/header";
 import Section from "./componentes/Section/Section"
-
+import Contador from "./componentes/Contador/Contador"
 
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
 
 
       </div> 
+
+      <Contador/>
 
 
     </div>

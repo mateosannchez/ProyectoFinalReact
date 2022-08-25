@@ -1,14 +1,15 @@
 import Navbar from "../nav/NavBar";
 // import estilos from './header.module.css';
 import "../../App.css"
+import logoShoes from "../../img/logo1-removebg-preview.png"
 
 
-import Inicio from "../nav/paginas/inicio"
-import Comprar from "../nav/paginas/ccomprar"
-import Contacto from "../nav/paginas/contac"
-import Mayorista from "../nav/paginas/mayor"
-import Preguntas from "../nav/paginas/pregfrec"
-import Talles from "../nav/paginas/talles"
+// import Inicio from "../nav/paginas/inicio"
+// import Comprar from "../nav/paginas/ccomprar"
+// import Contacto from "../nav/paginas/contac"
+// import Mayorista from "../nav/paginas/mayor"
+// import Preguntas from "../nav/paginas/pregfrec"
+// import Talles from "../nav/paginas/talles"
 
 const Header = () => {
     return (
@@ -18,7 +19,8 @@ const Header = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-3 header__izq">
-                        <h1>Logo</h1>
+                        
+                        <img src={logoShoes} alt="" width="100px" height="80px" />
                         
                     </div>
                     <div className="col-3 header__cen">
