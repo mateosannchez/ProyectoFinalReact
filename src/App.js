@@ -1,8 +1,13 @@
-import Header from "./componentes/Header/header";
-import Section from "./componentes/Section/Section"
+import Header from "./componentes/Header/Header";
+import Section from "./componentes/Section/ItemListContainer"
 import Contador from "./componentes/Contador/Contador"
 
 function App() {
+
+  const onAdd = () => {
+    console.log("Agregaste al carrito");
+  };
+  
   return (
     <div className="App">
 
@@ -10,18 +15,18 @@ function App() {
 
       <div className="App">
 
-                
-
-                <Section
-                    marca="Nike"
-                    modelo="Air Max"
-                    precio="7000"
-                />
 
 
-      </div> 
+        <Section
+          marca="Nike"
+          modelo="Air Max"
+          precio="7000"
+        />
 
-      <Contador/>
+
+      </div>
+
+      <Contador stock={5} initial={1} onAdd={onAdd} />
 
 
     </div>

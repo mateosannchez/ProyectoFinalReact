@@ -18,16 +18,16 @@ const Header = () => {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-3 header__izq">
+                    <div className="col-md-3 header__izq">
                         
                         <img src={logoShoes} alt="" width="100px" height="80px" />
                         
                     </div>
-                    <div className="col-3 header__cen">
+                    <div className="col-md-3 header__cen">
                         <input class="js-search-input form-control search-input" autocomplete="off" type="search" name="q" placeholder="¿Qué estás buscando?" aria-label="¿Qué estás buscando?"></input>
 
                     </div>
-                    <div className="col-3 header__der">
+                    <div className="col-md-3 header__der">
                         <i class="ri-shopping-cart-line header__der--car"></i>
 
                     </div>

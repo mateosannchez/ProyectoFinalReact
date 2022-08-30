@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import Section from "../Section/ItemListContainer";
 import "../../App.css"
 
-const Counter = () => {
 
-    const [count, setCount] = useState(1);
+const Counter = ({stock, initial, onAdd}) => {
 
-    let stock = 5
+    const [count, setCount] = useState(initial);
+
+    let minimo = 1
 
     const sumar = () => {
 
@@ -17,10 +19,16 @@ const Counter = () => {
     }
 
     const restar = () => {
-        setCount(count - 1)
-
+    
+        if (count>minimo) {
+            setCount(count - 1);
+        } else {
+            alert("Stock minimo")
+        }
+        
+      
     }
-
+    // disabled={count === 0}
     return (
         <div className="contador">
             {/* <div className="contador__1"> */}
@@ -29,7 +37,7 @@ const Counter = () => {
                 <button className="contador__resta" onClick={restar}>-</button>
             {/* </div> */}
 
-            <button className="contador__carrito" disabled={count === 0}>Agregar al carrito</button>
+            <button className="contador__carrito" onClick={onAdd} >Agregar al carrito</button>
             <p className="contador__stock">{stock} Productos disponibles</p>
 
         </div>
