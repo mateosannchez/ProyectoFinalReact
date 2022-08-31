@@ -7,21 +7,17 @@ function App() {
   const onAdd = () => {
     console.log("Agregaste al carrito");
   };
-  
+
   return (
     <div className="App">
 
       <Header />
 
-      <div className="App">
+      <div className="item__grid">
 
 
 
-        <Section
-          marca="Nike"
-          modelo="Air Max"
-          precio="7000"
-        />
+        <Section/>
 
 
       </div>
@@ -32,48 +28,6 @@ function App() {
     </div>
   )
 }
-
-
-
-
-
-
-// function Person(props) {
-//   
-
-//   return (
-
-{/* <div className="person">
-
-  <h2>Marca: {props.marca}</h2>
-  <h3>Modelo: {props.modelo}</h3>
-  <h3>Precio: {props.precio}</h3>
-</div> */}
-//   );
-// }
-
-
-// function App() {
-
-//   return (
-
-//     <div className="App">
-
-//       <h1>Productos</h1>
-
-//       <Person
-//         marca="Nike"
-//         modelo="Air Max"
-//         precio="7000" 
-//       />
-
-
-//     </div>
-
-//   )
-
-// };
-
 
 
 

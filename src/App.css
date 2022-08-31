@@ -72,14 +72,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateX(-50px);
   
   
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-secondary {
+  --bs-btn-color: black;
+  --bs-btn-bg: white;
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: white;
+}
 .header__cen {
   border: 10px solid lawngreen;
-  width: 500px;
-  transform: translateX(50px);
+  width: 200px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +106,7 @@
   justify-content: center;
   align-items: center;
   width: 100px;
-  transform: translateX(240px);
+  
 }
 
 .header__der--car {
@@ -174,3 +186,69 @@
   border-color: white;
   /* border: none; */
 }
+
+.item__grid {
+  /* border: 10px solid blue; */
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding: 2rem;
+  margin: auto 90px;
+
+  
+}
+
+.item__grid--card {
+  /* border: 10px solid sienna; */
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px black;
+}
+
+.item__grid--card--img {
+  border: 10px solid sienna; 
+  margin: 20px;
+}
+
+.item__grid--name {
+  border: 10px solid yellow;
+  margin: 5px;
+  font-size: 25px;
+  line-height: 25px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ 
+}
+
+.item__grid--subname {
+  border: 10px solid green;
+  margin: 5px;
+  font-size: 20px;
+  line-height: 29px;
+  
+ 
+}
+
+.item__grid--price {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ri-eye-line {
+  margin: 7px;
+
+}
+
+.item__grid--ver {
+  border: 1px solid black;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  margin: 5px;
+
+}
+

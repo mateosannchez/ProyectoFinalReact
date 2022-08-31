@@ -28,7 +28,7 @@ const Counter = ({stock, initial, onAdd}) => {
         
       
     }
-    // disabled={count === 0}
+    
     return (
         <div className="contador">
             {/* <div className="contador__1"> */}

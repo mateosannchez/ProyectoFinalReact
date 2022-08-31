@@ -5,15 +5,15 @@ export const productos = [
         modelo: "Air Max Tricolor",
         precio:7500,
         stock:7,
-        img:"airmaxtri.jpeg",
+        IMG:"./img/airmaxtri.jpeg",
     },
     {
         id:2,
         marca:"Nike",
-        modelo: "Jordan Low Roja",
-        precio:7600,
+        modelo: "Jordan Dior Premium",
+        precio:8300,
         stock:3,
-        img:"jordanlowroja.jpg",
+        IMG:"./img/diorpremium.jpeg",
     },
     {
         id:3,
@@ -21,7 +21,7 @@ export const productos = [
         modelo: "Rsx Negra",
         precio:7800,
         stock:6,
-        img:"pumasrsx.jpeg",
+        IMG:"./img/pumasrsx.jpeg",
     },
     {
         id:4,
@@ -29,7 +29,7 @@ export const productos = [
         modelo: "SB Dunk Low Pigeon Premium",
         precio:8900,
         stock:2,
-        img:"nikesb.jpeg",
+        IMG:"./img/nikesb.jpeg",
     },
     {
         id:5,
@@ -37,7 +37,7 @@ export const productos = [
         modelo: "Mcqueen",
         precio:7200,
         stock:3,
-        img:"alexander.jpeg",
+        IMG:"./img/alexander.jpeg",
     },
     {
         id:6,
@@ -45,7 +45,7 @@ export const productos = [
         modelo: "Old Skool",
         precio:7000,
         stock:10,
-        img:"vans.jpeg",
+        IMG:"./img/vans.jpeg",
     },
 
 ]

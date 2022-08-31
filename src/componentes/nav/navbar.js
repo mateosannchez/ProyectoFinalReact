@@ -26,7 +26,7 @@ const navbar = () => {
                                 <a className="nav-link text-white" href="./paginas/ccomprar.js">Cómo comprar</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a className="nav-link text-white" href="./paginas/pregfrec.js">Preguntas frecuentes</a>
                             </li>
 
@@ -34,7 +34,7 @@ const navbar = () => {
                                 <a className="nav-link active text-white" aria-current="page" href="./paginas/contac.js">Contacto</a>
                             </li>
 
-                            <li classNaame="nav-item">
+                            <li className="nav-item">
                                 <a className="nav-link active text-white" aria-current="page" href="./paginas/talles.js">Guía de talles</a>
                             </li>
                         </ul>
