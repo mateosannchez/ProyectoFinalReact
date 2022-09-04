@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { productos } from "../../Productos/Productos";
+import "../../App.css"
+
+const llamado = {productos}
 
 const ItemDetailContainer = () => {
-  return (
-    <div style={{backgroundColor: "black"}}>
-        ItemDetailContainer
-        <ItemDetail/>
 
+  const [data, setData] = useState({})
+
+  
+  useEffect(() => {
+    const getData = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productos)
+      }, 3000);
+    })
+    getData.then(resolve => setData(resolve))
+  },[])
+  
+  
+  return (
+    <div className='detalle__grid'>
+      <ItemDetail data={data} />
     </div>
   )
 }

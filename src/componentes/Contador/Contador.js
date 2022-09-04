@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Section from "../Section/ItemListContainer";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import "../../App.css"
 
 

@@ -9,7 +9,7 @@ const Item = ({ producto }) => {
 
   return (
 
-    <div >
+    <div>
 
       <div className='item__grid--card' >
         
@@ -28,33 +28,34 @@ const Item = ({ producto }) => {
       </div>
 
 
+
+
       {/* <div className="container">
+
+
         <div className="row">
-          <div className="col-6">
-
-            <div className="col-4">
-
-              <div>
-                <img src={IMG} alt="" width="250px" height="320px" />
-              </div>
-
-              <div>
-                <p>{marca}</p>
-                <p>{modelo}</p>
-                <p>{divisa}{precio}</p>
-                <button>Ver</button>
-
-              </div>
-
-            </div>
+          <div className="col-4" >
+            <h1>Columna 1</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+          </div>
+          <div class="col-4" >
+            <h1>Columna 2</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+          </div>
+          <div class="col-4" >
+            <h1>Columna 3</h1>
+            <p>Esto es una prueba de bootstrap.</p>
           </div>
         </div>
       </div> */}
 
+    </div>
 
-    </div >
+
   )
+      
 
 }
 
-export default Item 
+
+      export default Item 

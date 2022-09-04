@@ -33,7 +33,7 @@ const Section = (props) => {
             <ItemList
                 products={products}
             />
-            <section className="hola">
+            <section>
 
 
             </section>
