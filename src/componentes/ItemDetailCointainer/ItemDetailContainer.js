@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { productos } from "../../Productos/Productos";
 import "../../App.css"
+import { useParams } from 'react-router-dom';
 
-const llamado = {productos}
 
 const ItemDetailContainer = () => {
-
-  const [data, setData] = useState({})
-
   
+  const { id } = useParams();
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     const getData = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productos)
-      }, 3000);
-    })
-    getData.then(resolve => setData(resolve))
-  },[])
+      resolve(productos);
+    });
+    getData.then((res) => {
+      const item = res.find((resp) => resp.id === parseFloat(id));
+      setProduct(item);
+    });
+  }, []);
   
-  
+  console.log(product)
   return (
-    <div className='detalle__grid'>
-      <ItemDetail data={data} />
-    </div>
-  )
-}
+    <>
+      <ItemDetail product={product} />
+    </>
+  );
+};
 
 export default ItemDetailContainer

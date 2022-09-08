@@ -1,29 +1,24 @@
-import Header from "./componentes/Header/Header";
-import Section from "./componentes/Section/ItemListContainer"
-import Contador from "./componentes/Contador/Contador"
-import ItemDetailContainer from "./componentes/ItemDetailCointainer/ItemDetailContainer";
+import Header from "./componentess/Header/Header";
+import Section from "./componentes/Section/Section";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Footer from "./componentes/Footer/Footer";
 
 function App() {
 
-  const onAdd = () => {
-    console.log("Agregaste al carrito");
-  };
 
   return (
     <div className="App">
+      <BrowserRouter>
 
-      <Header />
-
-      <div className="item__grid">
-
-        <Section/>
-
-      </div>
-
-      <Contador stock={5} initial={1} onAdd={onAdd} />
-      <ItemDetailContainer/>
+        <Header />
 
 
+        <Section />
+
+        <Footer/>
+        
+      </BrowserRouter>
     </div>
   )
 }

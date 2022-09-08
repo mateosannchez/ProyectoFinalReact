@@ -1,15 +1,9 @@
-import React from 'react';
-import "../../App.css"
-import Contador from '../Contador/Contador';
-import { productos } from '../../Productos/Productos';
-
+import React from "react";
+import "../../App.css";
+import Contador from "../Contador/Contador";
 
 const ItemDetail = ({ product }) => {
-  
-  const { marca, modelo, precio, IMG, id } = product;
-
   console.log(product);
-
   const divisa = "$";
 
   const onAdd = () => {
@@ -49,8 +43,6 @@ const ItemDetail = ({ product }) => {
       </div>
     </div>
   );
-
 };
-
 
 export default ItemDetail;
