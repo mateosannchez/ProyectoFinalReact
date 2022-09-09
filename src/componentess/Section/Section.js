@@ -14,13 +14,10 @@ const Section = () => {
                     element={<ItemListContainer />}
                 />
                 <Route
-                    path='/producto/:productoNombre'
+                    path='/producto/:categoriaId'
                     element={<ItemListContainer />}
                 />
-                <Route
-                    path='/detail/:idProduc'
-                    element={<ItemDetailContainer />}
-                />
+                
                  <Route
                     path='/detail/:marca'
                     element={<ItemDetailContainer />}

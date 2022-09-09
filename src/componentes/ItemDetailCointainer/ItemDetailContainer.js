@@ -9,20 +9,23 @@ const ItemDetailContainer = () => {
   
   const { id } = useParams();
   const [product, setProduct] = useState([]);
+
+  const getData = new Promise((resolve, reject) => {
+    resolve(productos);
+  });
+
   useEffect(() => {
-    const getData = new Promise((resolve, reject) => {
-      resolve(productos);
-    });
     getData.then((res) => {
       const item = res.find((resp) => resp.id === parseFloat(id));
       setProduct(item);
     });
   }, []);
   
-  console.log(product)
+  
+  
   return (
     <>
-      <ItemDetail product={product} />
+      <ItemDetail product={product}/>
     </>
   );
 };

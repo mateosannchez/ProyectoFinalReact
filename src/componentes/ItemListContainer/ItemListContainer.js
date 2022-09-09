@@ -5,29 +5,49 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
 
 
-const ItemListContainer = (props) =>{
-    
+const ItemListContainer = (props) => {
 
-const [items, setItems] = useState([]);
-
+  const { categoriaName } = useParams()
   const [products, setProducts] = useState([]);
 
-  const getData = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(productos);
-    }, 1000);
-  });
-
   useEffect(() => {
-    getData.then((data) => setProducts(data));
-  }, []);
 
-  return (
-    <>
-      <ItemList products={products} />
-      <section></section>
-    </>
-  );
-};
+    const getProductos = new Promise((resolve, reject) => {
+      
+      const prodFil = productos.filter(
+        (prod) => prod.marca === categoriaName
+      );
+      
+      setTimeout(() => {
+        resolve(categoriaName ? prodFil : productos)
+      }, 1000);
+    });
 
-export default ItemListContainer;
+    getProductos
+      .then((data) => {
+        setProducts(data)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+    
+  }, [categoriaName])
+
+  
+
+  // useEffect(() => {
+  //   getData.then((data) => setProducts(data));
+  // }, []);
+
+    return (
+      <>
+        <ItemList products={products} />
+        
+      </>
+    );
+  };
+
+  
+
+  export default ItemListContainer;

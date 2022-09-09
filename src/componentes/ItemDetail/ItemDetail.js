@@ -1,13 +1,14 @@
 import React from 'react';
 import "../../App.css"
+import ItemDetailContainer from '../ItemDetailCointainer/ItemDetailContainer';
 import Contador from '../Contador/Contador';
 import { productos } from '../../Productos/Productos';
+import { Link } from 'react-router-dom';
 
+const ItemDetail = ({product}) => {
 
-const ItemDetail = ({ product }) => {
+  const {marca, modelo, precio, IMG, id} = product;
   
-  const { marca, modelo, precio, IMG, id } = product;
-
   console.log(product);
 
   const divisa = "$";
@@ -16,21 +17,22 @@ const ItemDetail = ({ product }) => {
     console.log("Agregaste al carrito");
   };
 
+  console.log(id)
   return (
     <div className="container">
       <div className="detail">
-        <img src={product?.IMG} alt="" className="detail__img" />
+        <img src={IMG} alt="" className="detail__img" />
         <div className="content">
           <h5 className="content__ruta">ruta categoria</h5>
           <h1 className="content__title">
-            {product?.marca}
+            {marca}
             <br />
-            {product?.modelo}
+            {modelo}
           </h1>
 
           <h2 className="content__price">
             {divisa}
-            {product?.precio}
+            {precio}
           </h2>
           <p className="content__text">
             Vas a poder aprovechar esta oferta en cualquier producto de la

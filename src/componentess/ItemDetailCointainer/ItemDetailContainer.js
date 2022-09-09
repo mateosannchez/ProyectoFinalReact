@@ -4,7 +4,7 @@ import { productos } from "../../Productos/Productos";
 import "../../App.css";
 import { useParams } from "react-router-dom";
 
-// const llamado = { productos };
+
 
 const ItemDetailContainer = () => {
   const { id } = useParams();

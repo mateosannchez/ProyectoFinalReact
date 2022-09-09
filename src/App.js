@@ -1,4 +1,4 @@
-import Header from "./componentess/Header/Header";
+import Header from "./componentes/Header/Header";
 import Section from "./componentes/Section/Section";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
