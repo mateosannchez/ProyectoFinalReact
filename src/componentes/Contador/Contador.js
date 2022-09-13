@@ -25,10 +25,13 @@ const Counter = ({stock, initial, onAdd}) => {
             setCount(count - 1);
         } else {
             alert("Stock minimo")
-        }
-        
-      
+        } 
     }
+
+    const addProduct = () => {
+        onAdd(count);
+        setCount(initial);
+      };
     
     return (
         <div className="contador">
@@ -38,7 +41,7 @@ const Counter = ({stock, initial, onAdd}) => {
                 <button className="contador__resta" onClick={restar}>-</button>
             {/* </div> */}
 
-            <button className="contador__carrito" onClick={onAdd} >Agregar al carrito</button>
+            <button className="contador__carrito" onClick={addProduct} >Agregar al carrito</button>
             <p className="contador__stock">{stock} Productos disponibles</p>
 
         </div>

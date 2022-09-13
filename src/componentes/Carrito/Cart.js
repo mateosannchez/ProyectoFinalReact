@@ -1,16 +1,30 @@
 import React from 'react'
-import "../../App.css"
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../../Context/CartContext'
+import ItemCart from './ItemCart';
 
 const Cart = () => {
-    return (
-        <div>
-            <div className="col-md-3 header__der">
-                <i className="ri-shopping-cart-line header__der--car"></i>
+    const { cart, totalPrecio } = useCartContext();
 
+    // if (cart.length === 0) {
+        return (
+            <div>
+                {cart.length === 0 ? <div> <p>El carrito está vacio</p><Link to="/">Seguir comprando</Link> </div> : cart.map(product => <ItemCart key={product.id} product={product}/>) }
+                <p>Total: {totalPrecio()}</p>
+                {/* <p>El carrito está vacio</p>
+                <Link to="/">Seguir comprando</Link> */}
             </div>
-        </div>
+          )
+   //}
 
-    )
+  return (
+    <div>
+        {
+            cart.map(product => <ItemCart key={product.id} product={product}/>)
+        }
+        <p>Total: {totalPrecio()}</p>
+    </div>
+  )
 }
 
 export default Cart

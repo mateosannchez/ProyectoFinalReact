@@ -1,5 +1,5 @@
 import Navbar from "../nav/NavBar";
-// import estilos from './header.module.css';
+import CartWidget from "../CartWidget/CartWidget";
 import "../../App.css"
 import Cart from "../Carrito/Cart";
 import { Link, NavLink } from "react-router-dom";
@@ -21,12 +21,11 @@ const Header = () => {
                             </button>
                             <ul className="dropdown-menu">
                                 <li><NavLink className="dropdown-item" to={`/categoria/Nike`}>Nike Air</NavLink></li>
-                                {/* <li><NavLink className="dropdown-item" to={`/categoria/Jordan`}>Jordan</NavLink></li> */}
+                                
                                 <li><NavLink className="dropdown-item" to={`/categoria/Puma`}>Puma RSX</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Alexander`}>Alexander</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Vans`}>Vans</NavLink></li>
-                                {/* <li><NavLink className="dropdown-item" to={`/categoria/SB`}>SB Dunk</NavLink></li> */}
-
+                               
                             </ul>
                         </div>
                     </div>
@@ -37,17 +36,46 @@ const Header = () => {
                     </div>
 
                     <div className="col-md-3 header__der">
-                        <Link to="/cart">
-                            <Cart />
-                        </Link>
+                        
+                        <Link to="/cart"><CartWidget/></Link>
                     </div>
-                    
+
                 </div>
             </div>
 
             <nav className="header__nav">
                 <Navbar />
             </nav>
+
+
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src="./img/gg.jpg"  className="d-block w-100" alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        
+                        <img src="./img/mc.jpg"  className="d-block w-100" alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        
+                        <img src="./img/pp.jpg"  className="d-block w-100" alt="" />
+                    </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
+            </div>
 
         </header>
     )

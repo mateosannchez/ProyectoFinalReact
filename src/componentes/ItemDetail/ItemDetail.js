@@ -1,23 +1,42 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import "../../App.css"
-import ItemDetailContainer from '../ItemDetailCointainer/ItemDetailContainer';
 import Contador from '../Contador/Contador';
-import { productos } from '../../Productos/Productos';
+import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext';
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({ product }) => {
 
-  const {marca, modelo, precio, IMG, id} = product;
-  
-  console.log(product);
+  const { marca, modelo, precio, IMG, id } = product;
+
+  const [goToCart, setGoToCart] = useState(false)
+
+  const { addProduct } = useCartContext();
+
+  // const onAdd = (cantidad) => {
+  //   setGoToCart(true);
+  //   addProduct(data, cantidad);
+  // }
 
   const divisa = "$";
+  const [cantidad, setCantidad] = useState(0);
+  const { cart, addToCart, isInCart } = useContext(CartContext);
 
-  const onAdd = () => {
-    console.log("Agregaste al carrito");
+  // const onAdd = (quantity) => {
+  //   setCantidad((prevState)=>prevState + quantity);
+  //   addToCart(product, quantity);
+  //   isInCart(product);
+  //   console.log("Agregaste al carrito");
+  // };
+
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste ${cantidad} al carrito`);
+    setGoToCart(true)
+    addProduct(product, cantidad)
+    
   };
 
-  console.log(id)
+  
   return (
     <div className="container">
       <div className="detail">
@@ -46,7 +65,16 @@ const ItemDetail = ({product}) => {
             <option value="talle42">Talle 42</option>
             <option value="talle43">Talle 43</option>
           </select>
-          <Contador stock={5} initial={1} onAdd={onAdd} />
+
+          {
+
+            goToCart
+              ? <Link to="/cart" className='link__carrito'><i class="ri-check-double-line"></i>Ir al carrito</Link>
+              : <Contador stock={5} initial={1} onAdd={onAdd} />
+         
+          }
+
+      
         </div>
       </div>
     </div>
