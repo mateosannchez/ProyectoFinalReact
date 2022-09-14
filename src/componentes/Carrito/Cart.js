@@ -5,26 +5,44 @@ import ItemCart from './ItemCart';
 
 const Cart = () => {
     const { cart, totalPrecio } = useCartContext();
+    // let history = useNavigate();
 
-    // if (cart.length === 0) {
+    if (cart.length === 0) {
         return (
             <div>
-                {cart.length === 0 ? <div> <p>El carrito está vacio</p><Link to="/">Seguir comprando</Link> </div> : cart.map(product => <ItemCart key={product.id} product={product}/>) }
-                <p>Total: {totalPrecio()}</p>
-                {/* <p>El carrito está vacio</p>
-                <Link to="/">Seguir comprando</Link> */}
+                {/* {cart.length === 0 ? <div> <p>El carrito está vacio</p><Link to="/">Seguir comprando</Link> </div> : cart.map(product => <ItemCart key={product.id} product={product}/>) }
+                <p>Total: {totalPrecio()}</p> */}
+                <p>El carrito está vacio</p>
+                <Link to="/"><button>Seguir comprando</button> </Link>
             </div>
-          )
-   //}
+        )
+    }
 
-  return (
-    <div>
-        {
-            cart.map(product => <ItemCart key={product.id} product={product}/>)
-        }
-        <p>Total: {totalPrecio()}</p>
-    </div>
-  )
-}
+    //   return (
+    //     <div>
+    //         {
+    //             cart.map(product => <ItemCart key={product.id} product={product}/>)
+    //         }
+    //         <p>Total: {totalPrecio()}</p>
+    //     </div>
+    //   )
+    return (
+        
+        <>
+            {cart.map((product) => (
+                <ItemCart key={product.id} product={product} />
+            ))}
+            <p>total de la compra: $ {totalPrecio()}</p>
+            <button className="">
+                Volver atrás
+            </button>
+            
+            <Link to="/checkout" className="">
+               <button>Pagar</button> 
+            </Link>
+        </>
+    );
+};
+
 
 export default Cart

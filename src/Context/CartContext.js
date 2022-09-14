@@ -34,7 +34,24 @@ const CartProvider = ({ children }) => {
     return cart.reduce((prev, act) => prev + act.cantidad * act.precio, 0);
   }
 
-  const totalProduc = () => cart.reduce((acumulador, producActual) => acumulador + producActual.cantidad, 0)
+  const totalProduc = () => cart.reduce((acumulador, producActual) => acumulador + producActual.cantidad, 0);
+
+  const borrarUno = (id) => {
+    const filtrarProduc = cart.filter((prod) => prod.id !== id);
+    setCart(filtrarProduc);
+  };
+
+  const productCantidad = (id) => {
+    const product = cart.find((prod) => prod.id === id);
+    return product?.cantidad;
+  }
+
+  useEffect(() => {
+    totalPrecio();
+  }, [cart])
+  
+
+
   
   // const isInCart = (id) => {
   //   const valor = cart.some((prod) => prod.id === id);
@@ -102,6 +119,8 @@ const CartProvider = ({ children }) => {
       addProduct,
       totalPrecio,
       totalProduc,
+      borrarUno,
+      productCantidad,
       cart
     }}
     >

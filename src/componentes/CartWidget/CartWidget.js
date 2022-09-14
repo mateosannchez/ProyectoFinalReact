@@ -1,5 +1,7 @@
 import React from 'react'
 import { useCartContext } from '../../Context/CartContext'
+import ItemCart from '../Carrito/ItemCart'
+import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
     // const {totalProduc} = useCartContext();
@@ -8,6 +10,7 @@ const CartWidget = () => {
 
         <i className="ri-shopping-cart-line"></i>
         {/* <span>{totalProduc() || ""}</span> */}
+        
     </div>
 
 )

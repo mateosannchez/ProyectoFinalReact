@@ -262,6 +262,8 @@
   border: 10px solid blue;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 10px;
+  
 }
 
 .content__ruta {
