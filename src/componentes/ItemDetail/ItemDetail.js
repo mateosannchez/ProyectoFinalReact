@@ -3,7 +3,7 @@ import "../../App.css"
 import Contador from '../Contador/Contador';
 import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../Context/CartContext';
+// import { CartContext } from '../../Context/CartContext';
 
 const ItemDetail = ({ product }) => {
 
@@ -20,7 +20,7 @@ const ItemDetail = ({ product }) => {
 
   const divisa = "$";
   const [cantidad, setCantidad] = useState(0);
-  const { cart, addToCart, isInCart } = useContext(CartContext);
+  const { cart, addToCart, isInCart } = useContext();
 
   // const onAdd = (quantity) => {
   //   setCantidad((prevState)=>prevState + quantity);
@@ -70,7 +70,7 @@ const ItemDetail = ({ product }) => {
 
             goToCart
               ? <Link to="/cart" className='link__carrito'><i class="ri-check-double-line"></i>Ir al carrito</Link>
-              : <Contador stock={5} initial={1} onAdd={onAdd} />
+              : <Contador  stock={5} initial={1} onAdd={onAdd} />
          
           }
 

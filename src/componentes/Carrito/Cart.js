@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+// import { useContext } from 'react';
 import { useCartContext } from '../../Context/CartContext'
 import ItemCart from './ItemCart';
 
@@ -10,24 +11,30 @@ const Cart = () => {
     if (cart.length === 0) {
         return (
             <div>
-                {/* {cart.length === 0 ? <div> <p>El carrito está vacio</p><Link to="/">Seguir comprando</Link> </div> : cart.map(product => <ItemCart key={product.id} product={product}/>) }
-                <p>Total: {totalPrecio()}</p> */}
-                <p>El carrito está vacio</p>
-                <Link to="/"><button>Seguir comprando</button> </Link>
+                
+
+                <div className="">
+                    <div className="">
+                        <h6 className="">
+                            Aún no agregaste elementos en el carrito
+                        </h6>
+                    </div>
+                    <div className="">
+                        <Link to="/" className=" ">
+                            <button>
+                                Ir a hacer compras
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+
             </div>
         )
     }
 
-    //   return (
-    //     <div>
-    //         {
-    //             cart.map(product => <ItemCart key={product.id} product={product}/>)
-    //         }
-    //         <p>Total: {totalPrecio()}</p>
-    //     </div>
-    //   )
+
     return (
-        
+
         <>
             {cart.map((product) => (
                 <ItemCart key={product.id} product={product} />
@@ -36,9 +43,9 @@ const Cart = () => {
             <button className="">
                 Volver atrás
             </button>
-            
+
             <Link to="/checkout" className="">
-               <button>Pagar</button> 
+                <button>Pagar</button>
             </Link>
         </>
     );
