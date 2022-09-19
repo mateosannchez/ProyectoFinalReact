@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -131,9 +132,34 @@
 .contador {
   border: 10px solid royalblue;
   width: 100%;
-  
+
 }
 
+.contador1 {
+  border: 10px solid darkolivegreen;
+  width: 230px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 14px;
+  height: 59px;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+}
+
+.contador2 {
+  border: 10px solid darkorange;
+  
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 14px;
+  height: 59px;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+}
 
 .contador__suma {
   border: 10px solid blue;
@@ -263,7 +289,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 10px;
-  
+
 }
 
 .content__ruta {
@@ -347,7 +373,7 @@
 .footer__grid {
   border: 10px solid red;
   color: #000;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -355,17 +381,17 @@
 
 .footer__nosotros {
   border: 10px solid chartreuse;
-  
+
 }
 
 .footer__nos--p {
   color: #777;
   font-size: 14px;
-    letter-spacing: 0;
-    line-height: 26px;
-    font-weight: 300;
-    text-transform: none;
-    font-style: normal;
+  letter-spacing: 0;
+  line-height: 26px;
+  font-weight: 300;
+  text-transform: none;
+  font-style: normal;
 }
 
 .footer__redes {
@@ -373,7 +399,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+
 }
 
 .footer__redes--cont {
@@ -398,6 +424,66 @@
   color: #000;
   cursor: pointer;
   text-decoration: none;
-  font-family: "Montserrat",Sans-serif;
+  font-family: "Montserrat", Sans-serif;
   font-size: 22px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 550px;
+}
+
+.cart {
+  border: 10px solid darkblue;
+  margin: 10px;
+}
+
+.cart__noProduc {
+  border: 10px solid darkcyan;
+  margin: 10px;
+  margin-top: 0;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.cart__total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cart__total1 {
+  text-align: left;
+  font-family: "Montserrat",Sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cart__total2 {
+  text-align: right;
+  font-family: "Montserrat",Sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.btn-link {
+  color: #000;
+  fill: #000;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  font-family: "Montserrat",Sans-serif;
+}
+
+.cart__img {
+  width: 90px;
+  height: auto;
 }

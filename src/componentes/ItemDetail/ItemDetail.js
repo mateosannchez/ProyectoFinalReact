@@ -5,6 +5,7 @@ import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 // import { CartContext } from '../../Context/CartContext';
 
+
 const ItemDetail = ({ product }) => {
 
   const { marca, modelo, precio, IMG, id } = product;
@@ -13,14 +14,9 @@ const ItemDetail = ({ product }) => {
 
   const { addProduct } = useCartContext();
 
-  // const onAdd = (cantidad) => {
-  //   setGoToCart(true);
-  //   addProduct(data, cantidad);
-  // }
-
   const divisa = "$";
-  const [cantidad, setCantidad] = useState(0);
-  const { cart, addToCart, isInCart } = useContext();
+  // const [cantidad, setCantidad] = useState(0);
+  // const { addToCart, productCantidad } = useContext();
 
   // const onAdd = (quantity) => {
   //   setCantidad((prevState)=>prevState + quantity);
@@ -37,12 +33,20 @@ const ItemDetail = ({ product }) => {
   };
 
   
+//   const onAdd = (cantidad) => {
+//     setCantidad(cantidad);
+//     addToCart(product, cantidad);
+// };
+
+//const quantity = productCantidad(product.id);
+
+  
   return (
     <div className="container">
       <div className="detail">
         <img src={IMG} alt="" className="detail__img" />
         <div className="content">
-          <h5 className="content__ruta">ruta categoria</h5>
+          <h5 className="content__ruta">{marca}</h5>
           <h1 className="content__title">
             {marca}
             <br />

@@ -1,25 +1,42 @@
-import React from "react";
-import { useContext } from "react";
-import { CartContext, useCartContext } from "../../Context/CartContext";
+import React from 'react'
+import Cart from './Cart'
+import { useCartContext } from '../../Context/CartContext'
 
-import "../../App.css"
+function ItemCart () {
+    const { cart, edditCart } = useCartContext()
 
-const ItemCart = ({ product }) => {
-  const { removeProduct, clearCart } = useCartContext();
+    const aumentarCart = (e) => {
+        const id = e.target.id;
+
+        const actualizarCart = [...cart];
+        for (let i = 0; i < actualizarCart.length; i++) {
+            if (actualizarCart[i].item.id === id) {
+                if (actualizarCart[i].item.stock > actualizarCart[i].quantity) {
+                    actualizarCart[i].quantity = actualizarCart[i].quantity + 1;
+                    edditCart(actualizarCart[i]);
+                }
+
+                break;
+            }
+        }
+    }
+    const disminuirCart = (e) => {
+        const id = e.target.id;
+
+        const actualizarCart = [...cart];
+        for (let i = 0; i < actualizarCart.length; i++) {
+            if (actualizarCart[i].item.id === id) {
+                if (actualizarCart[i].quantity !== 0) {
+                    actualizarCart[i].quantity = actualizarCart[i].quantity - 1;
+                    edditCart(actualizarCart[i]);
+                }
+
+                break;
+            }
+        }
+    }
   return (
-    <div>
-      <img src={product.IMG} alt="" />
-      <div>
-        <p>{product.marca} <br />{product.modelo}</p>
-        <p>{product.cantidad}</p>
-        <p>{product.precio}</p>
-        <p>Subtotal: {product.cantidad * product.precio}</p>
-        <button onClick={() => removeProduct(product.id)}>Eliminar</button>
-        <button className="" onClick={() => clearCart()}>
-            Vaciar carrito
-          </button>
-      </div>
-    </div>
+    <Cart aumentarCart= { aumentarCart } disminuirCart= { disminuirCart }></Cart>
   )
 }
 

@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import React, { useContext } from "react";
 export const useCartContext = () => useContext(CartContext)
- const CartContext = createContext();
+const CartContext = createContext();
 
 
 const CartProvider = ({ children }) => {
@@ -22,10 +22,10 @@ const CartProvider = ({ children }) => {
   const addProduct = (item, cantidad) => {
     if (isInCart(item.id)) {
       setCart(cart.map(product => {
-        return product.id === item.id ? { ...product, cantidad: product.cantidad + cantidad} : product
+        return product.id === item.id ? { ...product, cantidad: product.cantidad + cantidad } : product
       }))
     } else {
-      setCart([...cart, {...item, cantidad}]);
+      setCart([...cart, { ...item, cantidad }]);
     }
   }
 
@@ -33,6 +33,14 @@ const CartProvider = ({ children }) => {
 
   const totalPrecio = () => {
     return cart.reduce((prev, act) => prev + act.cantidad * act.precio, 0);
+  }
+
+  function edditCart(product) {
+    const actualizarCart = [...cart];
+    setCart(actualizarCart)
+  }
+  const clear = () => {
+    setCart([])
   }
 
   const totalProduc = () => cart.reduce((acumulador, producActual) => acumulador + producActual.cantidad, 0);
@@ -48,8 +56,9 @@ const CartProvider = ({ children }) => {
   }
 
 
+
   return (
-    <CartContext.Provider value={{ 
+    <CartContext.Provider value={{
       clearCart,
       isInCart,
       removeProduct,
@@ -58,6 +67,8 @@ const CartProvider = ({ children }) => {
       totalProduc,
       borrarUno,
       productCantidad,
+      edditCart,
+      clear,
       cart
     }}
     >
@@ -65,5 +76,6 @@ const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
 
 export default CartProvider;

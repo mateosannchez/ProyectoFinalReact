@@ -58,10 +58,10 @@ const Header = () => {
                     <div className="carousel-item active">
                         <img src="./img/gg.jpg"  className="d-block w-100" alt="" />
                     </div>
-                    <div className="carousel-item">
+                    {/* <div className="carousel-item">
                         
                         <img src="./img/mc.jpg"  className="d-block w-100" alt="" />
-                    </div>
+                    </div> */}
                     <div className="carousel-item">
                         
                         <img src="./img/pp.jpg"  className="d-block w-100" alt="" />

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Footer from "./componentes/Footer/Footer";
 
 
+
 function App() {
 
 
@@ -22,6 +23,7 @@ function App() {
 
           <Footer />
 
+        
         </BrowserRouter>
 
       
