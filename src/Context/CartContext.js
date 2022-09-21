@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import React, { useContext } from "react";
 export const useCartContext = () => useContext(CartContext)
-const CartContext = createContext();
+const CartContext = createContext({});
 
 
 const CartProvider = ({ children }) => {
@@ -55,7 +55,17 @@ const CartProvider = ({ children }) => {
     return product?.cantidad;
   }
 
+  // const totalQuantity = () => {
+  //   let acumulador = 0;
+  //   cart.forEach((product)=> {
+  //     acumulador += product.cantidad;
+  //   });
+  //   return acumulador === 0 ? "" : acumulador
+  // }
 
+  const iconCart = () =>{
+    return cart.reduce((acumulador, valor) => acumulador + valor.cantidad, 0)
+}
 
   return (
     <CartContext.Provider value={{
@@ -68,6 +78,7 @@ const CartProvider = ({ children }) => {
       borrarUno,
       productCantidad,
       edditCart,
+      iconCart,
       clear,
       cart
     }}

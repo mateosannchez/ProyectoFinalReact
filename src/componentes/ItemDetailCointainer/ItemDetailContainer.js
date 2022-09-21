@@ -12,30 +12,38 @@ const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   //const [loanding, setLoanding] = useState(true);
 
-  const getData = new Promise((resolve, reject) => {
-    resolve(productos);
-  });
-  useEffect(() => {
-    getData.then((res) => {
-      const item = res.find((resp) => resp.id === parseFloat(id));
-      setProduct(item);
-    });
-  }, []);
 
-  
+  // const getData = new Promise((resolve, reject) => {
+  //   resolve(productos);
+  // });
   // useEffect(() => {
-  //    const itemCollection = collection(db, "productos");
-  //    const ref = doc(itemCollection, id);
-  //    getDoc(ref).then((res) => {
-  //      setProduct({id: res.id, ...res.data() });
-      
-  //    });
-  
-  //  }, [id])
+  //   getData.then((res) => {
+  //     const item = res.find((resp) => resp.id === parseFloat(id));
+  //     setProduct(item);
+  //   });
+  // }, []);
+
+  useEffect(() => {
+  console.log(id);
+
+ const getDato = async ()  => {
+  const docRef = doc(db, "Productos", `${id}`);
+const res = await getDoc(docRef);
+console.log(res);
+if (res.exists()) {
+  console.log("Document data:", {id: res.id, ...res.data() });
+  setProduct({id: res.id, ...res.data() })
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
+ }
+ getDato()
+}, [id])
 
 
   
-  return (
+return (
     <>
       <ItemDetail product={product}></ItemDetail>
     </>
@@ -44,21 +52,3 @@ const ItemDetailContainer = () => {
 
 export default ItemDetailContainer;
 
-
-// function ItemDetailConteiner() {
-  //   const { id } = useParams();
-  //   const [product, setProduct] = useState({});
-  //   const [loanding, setLoanding] = useState(true);
-  
-  //   const getData = new Promise((resolve, reject) => {
-  //     resolve(productos);
-  //   });
-  
-  //   useEffect(() => {
-  //     getData.then((res) => {
-  //       const item = res.find((resp) => resp.id === parseFloat(id));
-  //       setProduct(item);
-  //     });
-
-
-// });

@@ -15,16 +15,7 @@ const ItemDetail = ({ product }) => {
   const { addProduct } = useCartContext();
 
   const divisa = "$";
-  // const [cantidad, setCantidad] = useState(0);
-  // const { addToCart, productCantidad } = useContext();
-
-  // const onAdd = (quantity) => {
-  //   setCantidad((prevState)=>prevState + quantity);
-  //   addToCart(product, quantity);
-  //   isInCart(product);
-  //   console.log("Agregaste al carrito");
-  // };
-
+ 
   const onAdd = (cantidad) => {
     console.log(`Agregaste ${cantidad} al carrito`);
     setGoToCart(true)
@@ -32,19 +23,11 @@ const ItemDetail = ({ product }) => {
     
   };
 
-  
-//   const onAdd = (cantidad) => {
-//     setCantidad(cantidad);
-//     addToCart(product, cantidad);
-// };
-
-//const quantity = productCantidad(product.id);
-
-  
+ 
   return (
     <div className="container">
       <div className="detail">
-        <img src={IMG} alt="" className="detail__img" />
+        <img src={IMG} alt="" className="detail__img" width="500px" height="600px" />
         <div className="content">
           <h5 className="content__ruta">{marca}</h5>
           <h1 className="content__title">

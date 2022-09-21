@@ -1,72 +1,51 @@
 import React, { useEffect, useState } from "react";
-import { productos } from "../../Productos/Productos";
 import "../../App.css"
+import Productos from "../../Productos/Productos"
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
+import { db } from '../../firebaseConfig';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = (props) => {
 
   const { categoriaName } = useParams()
-  const [products, setProducts] = useState([]);
-
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [items, setItems] = useState([])
+  
   useEffect(() => {
+    setIsLoading(true);
+    const itemCollection = collection(db, 'Productos');
 
-    //primer
+    const referencia = categoriaName
+        ? query(itemCollection, where('marca', '==', categoriaName))
+        : itemCollection;
 
-    const getProductos = new Promise((resolve, reject) => {
-      
-      const prodFil = productos.filter(
-        (prod) => prod.marca === categoriaName
-      );
-      
-      setTimeout(() => {
-        resolve(categoriaName ? prodFil : productos)
-      }, 1000);
-    });
+    getDocs(referencia)
+        .then((res) => {
+            const products = res.docs.map((prod) => {
+                return {
+                    id: prod.id,
+                    ...prod.data(),
+                };
+            });
+            setItems(products);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        });
+}, [categoriaName]);
 
-    getProductos
-      .then((data) => {
-        setProducts(data)
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-
-
-    //firestoresyt
-    //   const querydb = getFirestore();
-    //   const queryCollection = collection(querydb, "Productos");
-    //   if (categoriaName) {
-        
-    //     const queryFilter = query(queryCollection, where("categoria", "==", categoriaName))
-    //     getDocs(queryCollection)
-    //     .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data()}))))
-        
-    //   } else {
-    //     getDocs(queryCollection)
-    //     .then(res => setProducts(res.docs.map(product => ({ id: product.id, ...product.data()}))))
-        
-    //   }
-    // }, [categoriaName])
-
-  
-
-    // useEffect(() => {
-    //   getData.then((data) => setProducts(data));
-    // }, []);
-
-  });
-  
   return (
     <>
-      <ItemList products={products} />
-      
+      <ItemList items={items} />
+
     </>
   );
-}
 
-  
+};
 
-  export default ItemListContainer;
+
+export default ItemListContainer;

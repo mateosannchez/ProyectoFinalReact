@@ -3,10 +3,14 @@ import CartWidget from "../CartWidget/CartWidget";
 import "../../App.css"
 import Cart from "../Carrito/Cart";
 import { Link, NavLink } from "react-router-dom";
-
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 
 
 const Header = () => {
+
+ 
+
     return (
 
         <header className="header">
@@ -58,10 +62,7 @@ const Header = () => {
                     <div className="carousel-item active">
                         <img src="./img/gg.jpg"  className="d-block w-100" alt="" />
                     </div>
-                    {/* <div className="carousel-item">
-                        
-                        <img src="./img/mc.jpg"  className="d-block w-100" alt="" />
-                    </div> */}
+                   
                     <div className="carousel-item">
                         
                         <img src="./img/pp.jpg"  className="d-block w-100" alt="" />
