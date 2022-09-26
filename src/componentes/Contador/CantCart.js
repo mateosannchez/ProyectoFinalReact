@@ -44,8 +44,8 @@ const CantCart = ({stock, initial, onAdd}) => {
             {/* <button className="contador__carrito" onClick={addProduct} >Agregar al carrito</button>
             <p className="contador__stock">{stock} Productos disponibles</p>  */}
             {/* <button className='cart__cant--1'>{count}
-                <button className='cart__cant--2' onClick={restar}><i class="ri-subtract-line"></i></button>
-                <button className='cart__cant--3' onClick={sumar}><i class="ri-add-fill"></i></button>
+                <button className='cart__cant--2' onClick={restar}><i className="ri-subtract-line"></i></button>
+                <button className='cart__cant--3' onClick={sumar}><i className="ri-add-fill"></i></button>
             </button> */}
 
         </div>

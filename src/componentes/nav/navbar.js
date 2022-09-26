@@ -15,7 +15,7 @@ const navbar = () => {
                         <ul className="navbar-nav ">
                             
                             <li className="nav-item">
-                                <a class="nav-link text-white" href="./paginas/inicio.js">Inicio</a>
+                                <a className="nav-link text-white" href="./paginas/inicio.js">Inicio</a>
                             </li>
 
                             <li className="nav-item">

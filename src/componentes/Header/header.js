@@ -19,13 +19,12 @@ const Header = () => {
                 <div className="row">
                     <div className="col-md-3 header__cen">
 
-                        <div class="btn-group dropend">
+                        <div className="btn-group dropend">
                             <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </button>
                             <ul className="dropdown-menu">
                                 <li><NavLink className="dropdown-item" to={`/categoria/Nike`}>Nike Air</NavLink></li>
-                                
                                 <li><NavLink className="dropdown-item" to={`/categoria/Puma`}>Puma RSX</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Alexander`}>Alexander</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Vans`}>Vans</NavLink></li>

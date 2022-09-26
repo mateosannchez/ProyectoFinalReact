@@ -56,7 +56,7 @@ const ItemDetail = ({ product }) => {
           {
 
             goToCart
-              ? <Link to="/cart" className='link__carrito'><i class="ri-check-double-line"></i>Ir al carrito</Link>
+              ? <Link to="/cart" className='link__carrito'><i className="ri-check-double-line"></i>Ir al carrito</Link>
               : <Contador  stock={5} initial={1} onAdd={onAdd} />
          
           }
