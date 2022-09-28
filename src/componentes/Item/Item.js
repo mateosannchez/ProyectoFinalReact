@@ -6,23 +6,12 @@ import { useCartContext } from '../../Context/CartContext';
 
 const Item = ({ producto }) => {
   
-  //const [goToCart, setGoToCart] = useState()
-  
-  // const { addProduct } = useCartContext();
-  
-  // const onAdd = (cantidad) => {
-  //   console.log(`Agregaste ${cantidad} al carrito`);
-  //   setGoToCart(true)
-  //   addProduct(producto, cantidad)
-
-  // };
-  
   const { marca, modelo, precio, IMG, id } = producto;
 
   const divisa = "$";
   console.log();
   return (
-    <div>
+    <div className="">
       <div className="item__grid--card">
         <div>
           <img
@@ -33,6 +22,7 @@ const Item = ({ producto }) => {
             height="320px"
           />
         </div>
+
         <div>
           <p className="item__grid--name">{producto?.marca}</p>
           <p className="item__grid--subname">{producto.modelo}</p>
@@ -46,26 +36,10 @@ const Item = ({ producto }) => {
             </button>
           </Link>
 
-          {/* <Link to={`/cart`}>
-            <button className="dos">
-              <i className="ri-shopping-cart-line card__buy "></i>
-            </button>
-          </Link> */}
-
-          {/* {
-
-            goToCart
-              ? <Link to={`/cart/${id}`} className='dos'><i className="ri-shopping-cart-line card__buy "></i>Ir al carrito</Link>
-              : <h1>ir al carrito</h1>
-
-          } */}
-
-
-
-
         </div>
       </div>
     </div>
+
   );
 };
 

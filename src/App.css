@@ -40,7 +40,7 @@
 
 .container {
   border: 10px chocolate solid;
-  width: 10000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -68,7 +68,7 @@
 .header__izq {
   border: 10px solid palegreen;
 
-  /* width: 100px; */
+  width: 130px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,8 +219,8 @@
   grid-template-rows: repeat(1, 1fr);
   padding: 2rem;
   margin: auto 90px;
-
-
+  gap: 20px;
+  transform: translateX(20px);
 }
 
 .item__grid--card {
@@ -685,10 +685,185 @@
 }
 
 .form__subtitle {
-  font-family: "Montserrat",Sans-serif;
+  font-family: "Montserrat", Sans-serif;
   font-size: 14px;
   font-weight: bold;
   display: flex;
   flex-direction: row;
   margin-left: 10px;
+}
+
+
+
+@media screen and (max-width:1024px) {
+  .item__grid {
+    transform: translateX(-75px);
+  }
+}
+
+
+
+@media screen and (max-width:972px) {
+  .item__grid {
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(-45px);
+  }
+
+  .detail {
+    border: 10px solid blue;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+  }
+
+  .content__title {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  
+  }
+
+  .detail__img{
+    border: 10px solid green;
+    transform: translateX(50px);
+    margin: 20px;
+  }
+
+}
+
+@media screen and (max-width:680px) {
+  .item__grid {
+    grid-template-columns: repeat(1, 1fr);
+    transform: translateX(60px);
+  }
+
+  .detail__img{
+    transform: translateX(-20px);
+    width: 456px;
+  }
+
+  .content__ruta{
+    width: 440px;
+  }
+
+  .content__title{
+    width: 440px;
+  }
+
+  .content__price{
+    width: 420px;
+  }
+
+  .contador{
+    width: 456px;
+  }
+
+  .header__izq{
+    width: 180px;
+    transform: translateX(-50px);
+  }
+
+}
+
+@media screen and (max-width:560px) {
+  .item__grid {
+    grid-template-columns: repeat(1, 1fr);
+    transform: translateX(10px);
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__cen {
+    border: 10px solid lawngreen;
+    width: 200px;
+    
+  }
+
+  .header__izq {
+    border: 10px solid palegreen;
+    width: 210px;
+    transform: translateX(-30px);
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .detail__img{
+    width: 448px;
+  }
+
+  .content__ruta{
+    width: 430px;
+  }
+
+  .content__title{
+    width: 430px;
+  }
+
+  .content__price{
+    width: 410px;
+  }
+
+  .contador{
+    width: 448px;
+  }
+
+}
+
+@media screen and (max-width:480px){
+  .detail__img{
+    width: 392px;
+  }
+
+  .content__ruta{
+    width: 374px;
+  }
+
+  .content__title{
+    width: 374px;
+  }
+
+  .content__price{
+    width: 355px;
+  }
+
+  .contador{
+    width: 392px;
+  }
+
+}
+
+
+@media screen and (max-width:415px){
+  .header__cen {
+    border: 10px solid lawngreen;
+    width: 168px; 
+  }
+
+  .header__izq {
+    border: 10px solid palegreen;
+    width: 100px;
+    transform: translateX(-15px);
+  }
+
+  .item__grid {
+    grid-template-columns: repeat(1, 1fr);
+    transform: translateX(-65px);
+  }
+
+  .cart__noProduc{
+    font-size: 28px;
+  }
+
+  
 }

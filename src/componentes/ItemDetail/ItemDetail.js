@@ -3,7 +3,6 @@ import "../../App.css"
 import Contador from '../Contador/Contador';
 import { useCartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
-// import { CartContext } from '../../Context/CartContext';
 
 
 const ItemDetail = ({ product }) => {

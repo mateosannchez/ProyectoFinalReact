@@ -4,6 +4,7 @@ import ItemDetailContainer from '../ItemDetailCointainer/ItemDetailContainer'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import ItemCart from '../Carrito/ItemCart'
 import "../../App.css"
+import Form from '../Form/Form'
 import CartWidget from '../CartWidget/CartWidget';
 
 
@@ -34,7 +35,9 @@ const Section = () => {
 
                     <Route path='/cart' element={<ItemCart/>} />
                     
-                   
+                    <Route
+                        path='/form' element={<Form/>}
+                    />
                     
                 </Routes>
 

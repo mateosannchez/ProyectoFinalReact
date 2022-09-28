@@ -17,7 +17,7 @@ const Cart = () => {
 
     console.log(idCompra);
     if (idCompra) {
-        return <h3>Gracias por comprar tu id es: {idCompra}</h3>
+        return <h3 className="cart__noProduc">Gracias por comprar tu id es: {idCompra}</h3>
     }
 
     if (cart.length === 0) {
@@ -46,7 +46,7 @@ const Cart = () => {
         }}>
 
             <div className="container">
-                {/* <Form /> */}
+                
                 <div className='divider'></div>
                 {cart.map((prod) => (
 
@@ -69,7 +69,7 @@ const Cart = () => {
 
                             <button className='cart__cant--1'><button className='cart__cant--2'><i className="ri-subtract-line"></i></button>{prod.cantidad}<button className='cart__cant--3'><i className="ri-add-fill"></i></button></button>
 
-                            {/* <CantCart/> */}
+                            
                         </div>
 
                         <h4 className='cart__precio'>${prod.precio}</h4>

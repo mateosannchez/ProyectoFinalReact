@@ -10,19 +10,7 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  //const [loanding, setLoanding] = useState(true);
-
-
-  // const getData = new Promise((resolve, reject) => {
-  //   resolve(productos);
-  // });
-  // useEffect(() => {
-  //   getData.then((res) => {
-  //     const item = res.find((resp) => resp.id === parseFloat(id));
-  //     setProduct(item);
-  //   });
-  // }, []);
-
+ 
   useEffect(() => {
   console.log(id);
 
@@ -34,7 +22,7 @@ if (res.exists()) {
   console.log("Document data:", {id: res.id, ...res.data() });
   setProduct({id: res.id, ...res.data() })
 } else {
-  // doc.data() will be undefined in this case
+  
   console.log("No such document!");
 }
  }

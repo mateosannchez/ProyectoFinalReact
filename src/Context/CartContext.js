@@ -13,12 +13,7 @@ const CartProvider = ({ children }) => {
   const isInCart = (id) => cart.find(product => product.id === id)
   const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
 
-  // const addProduct = (item, newCantidad) => {
-  //   const newCart = cart.filter(prod => prod.id !== item.id);
-  //   newCart.push({ ...item, cantidad: newCantidad});
-  //   setCart(newCart)
-  // }
-
+  
   const addProduct = (item, cantidad) => {
     if (isInCart(item.id)) {
       setCart(cart.map(product => {
@@ -55,13 +50,6 @@ const CartProvider = ({ children }) => {
     return product?.cantidad;
   }
 
-  // const totalQuantity = () => {
-  //   let acumulador = 0;
-  //   cart.forEach((product)=> {
-  //     acumulador += product.cantidad;
-  //   });
-  //   return acumulador === 0 ? "" : acumulador
-  // }
 
   const iconCart = () =>{
     return cart.reduce((acumulador, valor) => acumulador + valor.cantidad, 0)
