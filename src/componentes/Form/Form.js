@@ -10,8 +10,10 @@ import React, { useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { useCartContext } from "../../Context/CartContext"
 import { Link } from "react-router-dom";
+import Cart from '../Carrito/Cart';
 
 const Form = ({ handleId }) => {
+  const [idCompra, setIdCompra] = useState('');
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [Email, setEmail] = useState('');
@@ -91,6 +93,12 @@ const Form = ({ handleId }) => {
   const handleChangeRetiro = (event) => {
     setRetiro(event.target.value);
   };
+
+
+
+  if (idCompra) {
+    return <h3 className="cart__noProduc">Gracias por comprar tu id es: {idCompra}</h3>
+}
 
   return (
 
@@ -192,7 +200,9 @@ const Form = ({ handleId }) => {
       </form>
     </div>
 
+
   )
+
 }
 
 export default Form;

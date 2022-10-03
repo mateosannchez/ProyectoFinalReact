@@ -28,7 +28,7 @@ const Header = () => {
                                 <li><NavLink className="dropdown-item" to={`/categoria/Puma`}>Puma RSX</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Alexander`}>Alexander</NavLink></li>
                                 <li><NavLink className="dropdown-item" to={`/categoria/Vans`}>Vans</NavLink></li>
-                               
+                                
                             </ul>
                         </div>
                     </div>

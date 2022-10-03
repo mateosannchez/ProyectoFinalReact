@@ -39,11 +39,18 @@
 }
 
 .container {
-  border: 10px chocolate solid;
+  
   width: 100%;
   display: flex;
   flex-direction: column;
 
+}
+
+.conteiner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ padding: 3rem;
 }
 
 .nav {
@@ -55,20 +62,20 @@
 }
 
 .header {
-  border: 10px blue solid;
+  
   background-color: black;
   width: 100%;
 }
 
 .header__nav {
-  border: 10px solid green;
+  
   width: 100%;
 }
 
 .header__izq {
-  border: 10px solid palegreen;
+  
 
-  width: 130px; 
+  width: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +98,7 @@
 }
 
 .header__cen {
-  border: 10px solid lawngreen;
+  
   width: 200px;
 
   display: flex;
@@ -102,7 +109,7 @@
 }
 
 .header__der {
-  border: 10px solid wheat;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,7 +119,7 @@
 }
 
 .header__der--car {
-  border: 10px solid wheat;
+ 
   color: white;
   width: 50px;
   transform: scale(1.7);
@@ -120,22 +127,14 @@
 
 }
 
-
-.section {
-
-  border: 10px solid peru;
-}
-
-
-
 .contador {
-  border: 10px solid royalblue;
+ 
   width: 100%;
 
 }
 
 .contador1 {
-  border: 10px solid darkolivegreen;
+ 
   width: 230px;
   margin: 10px;
   background-color: black;
@@ -148,8 +147,6 @@
 }
 
 .contador2 {
-  border: 10px solid darkorange;
-
   margin: 10px;
   background-color: black;
   color: white;
@@ -167,7 +164,7 @@
   color: black;
   font-size: 23px;
   border-color: white;
-  /* border: none; */
+  
 
 }
 
@@ -179,12 +176,12 @@
   color: black;
   font-size: 43px;
   border-color: white;
-  /* border: none; */
+ 
 
 }
 
 .contador__carrito {
-  /* border: 10px solid gray; */
+  
   background-color: black;
   color: white;
   border-bottom: 10px;
@@ -194,7 +191,7 @@
 }
 
 .contador__stock {
-  /* border: 10px solid indigo; */
+ 
   color: #212529;
   background-color: transparent;
   opacity: .65;
@@ -208,12 +205,10 @@
   color: black;
   font-size: 25px;
   border-color: white;
-  /* border: none; */
+
 }
 
 .item__grid {
-  /* border: 10px solid blue; */
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -224,7 +219,7 @@
 }
 
 .item__grid--card {
-  /* border: 10px solid sienna; */
+ 
   width: 300px;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -232,12 +227,12 @@
 }
 
 .item__grid--card--img {
-  border: 10px solid sienna;
+  
   margin: 20px;
 }
 
 .item__grid--name {
-  border: 10px solid yellow;
+  
   margin: 5px;
   font-size: 25px;
   line-height: 25px;
@@ -247,7 +242,7 @@
 }
 
 .item__grid--subname {
-  border: 10px solid green;
+ 
   margin: 5px;
   font-size: 20px;
   line-height: 29px;
@@ -282,9 +277,9 @@
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
 }
-
+s
 .detail {
-  border: 10px solid blue;
+  border: 10px solid green;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 10px;
@@ -292,7 +287,7 @@
 }
 
 .content__ruta {
-  border: 10px solid aqua;
+  
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -300,10 +295,11 @@
   font-size: 14px;
   font-weight: 400;
   opacity: 0.6;
+  width: 20px;
 }
 
 .content__title {
-  border: 10px solid lawngreen;
+ 
   margin-top: 0;
   font-family: "Montserrat", Sans-serif;
   font-size: 34px;
@@ -318,7 +314,7 @@
 }
 
 .content__price {
-  border: 10px solid lightcoral;
+ 
   margin-bottom: 0.5rem !important;
   margin-top: 0;
   font-family: "Montserrat", Sans-serif;
@@ -331,7 +327,7 @@
 }
 
 .content__text {
-  border: 10px solid palevioletred;
+ 
   margin-top: 0;
   line-height: 20px;
   font-size: 14px;
@@ -358,7 +354,7 @@
 }
 
 .content__title--t {
-  /* border: 10px solid red; */
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -369,13 +365,11 @@
   font-size: 14px;
 }
 
-.footer__grid {
-  border: 10px solid red;
+.cont__Footer {
+ 
   color: #000;
   background: rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+
 }
 
 .footer__nosotros {
@@ -394,7 +388,7 @@
 }
 
 .footer__redes {
-  border: 10px solid darkcyan;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -420,10 +414,6 @@
 }
 
 .link__carrito {
-  /* color: #000;
-  cursor: pointer;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 22px; */
 
   width: 100%;
   margin: 10px;
@@ -448,7 +438,7 @@
   color: #000;
   background: #9d231a;
   position: absolute;
-  right: 0px;
+  right: 10px;
   top: -3px;
   padding: 4px;
   font-size: 10px;
@@ -459,12 +449,12 @@
 }
 
 .cart {
-  border: 10px solid darkblue;
+ 
   margin: 10px;
 }
 
 .cart__noProduc {
-  border: 10px solid darkcyan;
+  
   margin: 10px;
   margin-top: 0;
   font-family: "Montserrat", Sans-serif;
@@ -592,7 +582,7 @@
 }
 
 .form {
-  border: 10px solid darkmagenta;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -650,7 +640,7 @@
 }
 
 .form__selector {
-  border: #000 solid 5px;
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -693,46 +683,140 @@
   margin-left: 10px;
 }
 
+.footer__copy {
+ 
+  background-color: #000;
+  color: white;
+  text-align: left !important;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 
-@media screen and (max-width:1024px) {
-  .item__grid {
-    transform: translateX(-75px);
-  }
+.footer__a {
+  font-weight: 700 !important;
+  text-decoration: none;
+  color: white;
+}
+
+.cont__Titulo {
+  margin-top: 0;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  box-sizing: inherit;
+  margin: 45px;
+}
+
+.content2 {
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 25px;
+  transform: translate(70px, 10px);
+}
+
+.content__circle {
+  border-radius: 100%;
+  border: #000 1px solid;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(2.5) translateY(14px);
+  margin-left: 55px;
+}
+
+.content__descrip {
+  display: flex;
+
+}
+
+.content__descrip--title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 110px;
+}
+
+.content__descrip--subtitle {
+  line-height: 20px;
+  font-size: 14px;
+  font-family: "Montserrat", Sans-serif;
+  margin-left: 110px;
+}
+
+.main__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
+
+@media screen and (max-width:1024px) {
+  .item__grid {
+    transform: translateX(-80px);
+  }
+
+  .content2 {
+    transform: translate(5px, 10px);
+  }
+  
+  .conteiner {
+   
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   
+  }
+}
+
+@media screen and (max-width:689px){
+  .item__grid {
+    
+    transform: translateX(-85px);
+  }
+}
+
 @media screen and (max-width:972px) {
   .item__grid {
     grid-template-columns: repeat(2, 1fr);
-    transform: translateX(-45px);
+    transform: translateX(9px);
   }
 
   .detail {
-    border: 10px solid blue;
+   
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: 10px;
   }
 
   .content__title {
-    
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 10px;
-  
+
   }
 
-  .detail__img{
-    border: 10px solid green;
-    transform: translateX(50px);
+  .detail__img {
+   
+    transform: translateX(65px);
     margin: 20px;
   }
 
+  .content2 {
+    display: none;
+  }
 }
 
 @media screen and (max-width:680px) {
@@ -741,38 +825,41 @@
     transform: translateX(60px);
   }
 
-  .detail__img{
+  .detail__img {
     transform: translateX(-20px);
     width: 456px;
   }
 
-  .content__ruta{
+  .content__ruta {
     width: 440px;
   }
 
-  .content__title{
+  .content__title {
     width: 440px;
   }
 
-  .content__price{
+  .content__price {
     width: 420px;
   }
 
-  .contador{
+  .contador {
     width: 456px;
   }
 
-  .header__izq{
+  .header__izq {
     width: 180px;
     transform: translateX(-50px);
   }
 
+  .content2 {
+    display: none;
+  }
 }
 
 @media screen and (max-width:560px) {
   .item__grid {
     grid-template-columns: repeat(1, 1fr);
-    transform: translateX(10px);
+    transform: translateX(9px);
   }
 
   .row {
@@ -781,14 +868,13 @@
   }
 
   .header__cen {
-    border: 10px solid lawngreen;
-    width: 200px;
-    
+    width: 150px;
+
   }
 
   .header__izq {
-    border: 10px solid palegreen;
-    width: 210px;
+   
+    width: 140px;
     transform: translateX(-30px);
   }
 
@@ -798,61 +884,71 @@
     grid-template-rows: repeat(1, 1fr);
   }
 
-  .detail__img{
+  .detail__img {
     width: 448px;
   }
 
-  .content__ruta{
+  .content__ruta {
     width: 430px;
   }
 
-  .content__title{
+  .content__title {
     width: 430px;
   }
 
-  .content__price{
+  .content__price {
     width: 410px;
   }
 
-  .contador{
+  .contador {
     width: 448px;
   }
 
 }
 
-@media screen and (max-width:480px){
-  .detail__img{
+@media screen and (max-width:480px) {
+
+  .content {
+    width: 300px;
+  }
+
+  .detail__img {
+    transform: translateX(-60px);
     width: 392px;
   }
 
-  .content__ruta{
+  .content__ruta {
     width: 374px;
   }
 
-  .content__title{
+  .content__title {
     width: 374px;
   }
 
-  .content__price{
+  .content__price {
     width: 355px;
   }
 
-  .contador{
+  .contador {
     width: 392px;
+  }
+
+  .conteiner{
+    width: auto;
   }
 
 }
 
 
-@media screen and (max-width:415px){
+@media screen and (max-width:415px) {
   .header__cen {
-    border: 10px solid lawngreen;
-    width: 168px; 
+    
+    width: 168px;
   }
 
   .header__izq {
-    border: 10px solid palegreen;
-    width: 100px;
+   
+    width: 115px;
     transform: translateX(-15px);
   }
 
@@ -861,9 +957,27 @@
     transform: translateX(-65px);
   }
 
-  .cart__noProduc{
+  .cart__noProduc {
     font-size: 28px;
   }
 
-  
+  .detail {
+    
+    width: 390px;
+    transform: translateX(-45px);
+}
+}
+
+@media screen and (max-width:350px) {
+  .item__grid--card {
+    width: 260px;
+    transform: translateX(-15px);
+  }
+
+  .item__grid--card--img {
+    
+    margin: 5px;
+}
+
+
 }

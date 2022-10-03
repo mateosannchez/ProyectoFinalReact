@@ -24,9 +24,9 @@ const ItemDetail = ({ product }) => {
 
  
   return (
-    <div className="container">
-      <div className="detail">
+    <div className="conteiner">
         <img src={IMG} alt="" className="detail__img" width="500px" height="600px" />
+      <div className="detail">
         <div className="content">
           <h5 className="content__ruta">{marca}</h5>
           <h1 className="content__title">

@@ -12,16 +12,6 @@ const ItemList = ({ items }) => {
       ))}
 
     </div>
-
-    // <div className='container-fluid col-sm-6 '>
-    //   <div className="row">
-    //     <div className="col-lg-4">
-    //       {items && items.map((producto) => (
-    //         <Item producto={producto} key={producto.id} />
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

@@ -95,11 +95,12 @@ const Cart = () => {
             </div>
 
             <button className='contador2' onClick={clear}>Borrar todo</button>
-            <Link to="">
+            {/* <Link to="">
                 <button className='contador1'>
                     Iniciar compra
                 </button>
-            </Link>
+            </Link> */}
+
             <Link to="/">
                 <button className='btn-link'>
                     Ir a hacer compras
