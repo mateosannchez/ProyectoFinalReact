@@ -9,6 +9,10 @@
 
 - [Firebase](https://firebase.google.com/?hl=es)
 
+## Pasos para hacer una compra
+
+![](public/img/app-react.gif)
+
 ## Pasos para levantar el proyecto
 
 ```
